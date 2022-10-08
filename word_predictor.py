@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import re
 
-FILE_PATH = 'C:/Users/giova/OneDrive/Área de Trabalho/Faster than the Flame.txt'
+FILE_PATH = '/Faster than the Flame.txt'
 
 file = open(FILE_PATH, 'r')
 
