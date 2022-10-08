@@ -9,7 +9,14 @@ import numpy as np
 import pandas as pd
 import re
 
-FILE_PATH = '/Faster than the Flame.txt'
+FILE_PATH = 'Neuroanatomia Aplicada (Meneses) 3. ed..pdf'
+
+file = open(FILE_PATH, 'rb')
+Reader = PFR(file)
+
+text = [Reader.getPage(i).extractText() for i in range(Reader.getNumPages())]
+
+'''FILE_PATH = 'Faster than the Flame.txt'
 
 file = open(FILE_PATH, 'r')
 
@@ -18,7 +25,7 @@ text = []
 for i in file:
     text.append(str(i)) # Extracting all words into a single list
 
-file.close()
+file.close()'''
 
 text = [x.lower() for x in text]
 text = [re.sub('[^a-z0-9\s\()]', '', x) for x in text]
