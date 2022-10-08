@@ -1,9 +1,6 @@
 from PyPDF2 import PdfFileReader as PFR
-from torchsummary import summary
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import NearestNeighbors
-from keras.preprocessing.text import Tokenizer
-from tensorflow.keras.utils import to_categorical
 import torch
 import numpy as np
 import pandas as pd
