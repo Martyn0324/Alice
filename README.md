@@ -12,3 +12,9 @@ Again, the derivatives seem to be ok, but they also seem to be too small. Using 
 The adversarial loss, meanwhile, suffer small variations, stabilizing within something around 0.7770 and 0.7790. This happens since 11th epoch, and the gradients average also doesn't change that much, stabilizing at around 3.105. Also keep in mind that we multiply the adversarial loss by 1e-3(beta) to get the perceptual loss.
 
 This architecture might be still functional, but it might not be that much interesting in the end...at least during the first epochs. Perhaps one could use a really agressive learning rate? (Transformer began training with lr=5 which decayed after a certain amount of epochs). Another option would be pre-training the Generator using only the Bleu Score Loss, without the Discriminator and, when the Generator is properly trained and generating some phrases, attach it to the Discriminator(perhaps it would also have to be pretrained?)
+
+Perhaps, judging by the way the Bleu Score works, it could replenish entirely a discriminator, as it classifies whether 2 sentences are similar or not. And what does a discriminator does if not judging how similar the generated input is to the original one?
+
+In the end, the TextGAN can be more similar to a SRGAN than expected. The generator will be rewarded for recreating the sentence in the labels, just like SRGAN Generator is (theorically) rewarded for recreating an image, without any innovation.
+
+How to make the Generator incorporate some innovation, not simply trying to recreate the data we already have? Perhaps we could use the same solution it was used in SRGAN: extract features from the original data and compare them with the features in the generated data. SRGAN does that with VGG19. Here, we could do that with a new, proper discriminator.
