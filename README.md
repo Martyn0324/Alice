@@ -1,6 +1,17 @@
 # Alice
 Training NLP...and trying to create a chatbot
 
+## Re-Initializing Research Project
+
+* TODO: Remake Word Tokenization Methods, focus on applying Byte-level Byte-Pair Encoding (as GPT-2 technical report first started, available through OpenAI's TikToken library)
+* Re-implement Pos-LN (Vanilla) Transformer, Pre-LN (More-stable, less residual accumulation) Transformer
+* Re-Implement Schedule Sampler --> Analyze possibility of Reinforcement Learning
+* Direct Preference Optimization Implementation
+* Consider Reasoning Process --> Might need a especific dataset --> Possibility of making a "nerfed Gemini/ChatGPT" (similar text generations, much lower capability
+
+* EXTRA: `Hakisa` --> Language Model able to follow a script --> Language Model able to be instructed on how to play games.
+[...]
+
 ## Transformer (and its issues)
 
 Base architecture for NLP tasks, more effective than RNNs, yet it is somehow more sentimental than RNNs.
