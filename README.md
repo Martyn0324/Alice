@@ -4,7 +4,7 @@ Training NLP...and trying to create a chatbot
 ## Re-Initializing Research Project
 
 * TODO: Remake Word Tokenization Methods, focus on applying Byte-level Byte-Pair Encoding (as GPT-2 technical report first started, available through [OpenAI's TikToken library](https://github.com/openai/tiktoken))
-* Re-implement Pos-LN (Vanilla) Transformer, Pre-LN (More-stable, less residual accumulation) Transformer
+* ~~Re-implement Pos-LN (Vanilla) Transformer~~, Pre-LN (More-stable, less residual accumulation) Transformer
 * Re-Implement Schedule Sampler --> Analyze possibility of Reinforcement Learning
 * Direct Preference Optimization Implementation
 * Consider Reasoning Process --> Might need a especific dataset --> Possibility of making a "nerfed Gemini/ChatGPT" (similar text generations, much lower capability)
